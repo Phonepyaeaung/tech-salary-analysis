@@ -1,0 +1,8 @@
+DATA VALIDATION REPORT
+Generated: 2026-02-15 23:04:06
+======================================================================
+
+Dataset Shape: (200000, 18)
+Columns: 18
+
+Missing Data: None
