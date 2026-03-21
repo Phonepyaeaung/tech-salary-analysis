@@ -69,13 +69,13 @@ def validate_data(df):
     report = {}
     
     # Basic info
-    print(f"\n📊 DATASET SHAPE")
+    print(f"\n DATASET SHAPE")
     print(f"  Rows: {len(df):,}")
     print(f"  Columns: {len(df.columns)}")
     report['shape'] = df.shape
     
     # Column overview
-    print(f"\n📋 COLUMNS")
+    print(f"\n COLUMNS")
     for i, col in enumerate(df.columns, 1):
         dtype = df[col].dtype
         non_null = df[col].notna().sum()
@@ -87,7 +87,7 @@ def validate_data(df):
     report['columns'] = df.columns.tolist()
     
     # Missing data
-    print(f"\n⚠️  MISSING DATA")
+    print(f"\n  MISSING DATA")
     missing = df.isnull().sum()
     if missing.sum() == 0:
         print("  ✓ No missing values detected")
@@ -99,7 +99,7 @@ def validate_data(df):
         report['missing_data'] = missing[missing > 0].to_dict()
     
     # Numeric columns summary
-    print(f"\n🔢 NUMERIC COLUMNS SUMMARY")
+    print(f"\n NUMERIC COLUMNS SUMMARY")
     numeric_cols = df.select_dtypes(include=[np.number]).columns
     if len(numeric_cols) > 0:
         summary = df[numeric_cols].describe().round(2)
@@ -109,7 +109,7 @@ def validate_data(df):
         print("  No numeric columns found")
     
     # Categorical columns
-    print(f"\n🏷️  CATEGORICAL COLUMNS")
+    print(f"\n  CATEGORICAL COLUMNS")
     categorical_cols = df.select_dtypes(include=['object']).columns
     for col in categorical_cols:
         unique_count = df[col].nunique()
@@ -123,7 +123,7 @@ def validate_data(df):
             print(f"    ... and {unique_count - 5} more")
     
     # Data types
-    print(f"\n🔍 DATA TYPES")
+    print(f"\n DATA TYPES")
     print(df.dtypes.to_string())
     
     # First few rows
