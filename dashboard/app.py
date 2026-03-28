@@ -13,7 +13,7 @@ import plotly.graph_objects as go
 st.set_page_config(page_title="Tech Salary Analysis", layout="wide")
 
 # Title
-st.title("💰 Global Tech Salary Analysis")
+st.title(" Global Tech Salary Analysis")
 st.markdown("Interactive analysis of 180,000 tech job records")
 
 # Load data from database
