@@ -127,7 +127,7 @@ def validate_data(df):
     print(df.dtypes.to_string())
     
     # First few rows
-    print(f"\n📄 SAMPLE DATA (First 3 rows)")
+    print(f"\n SAMPLE DATA (First 3 rows)")
     print(df.head(3).to_string())
     
     print("\n" + "=" * 70)
@@ -186,8 +186,8 @@ def main():
     # Save validation report
     save_validation_report(report)
     
-    print(f"\n✓ Data loading complete")
-    print(f"✓ Ready for cleaning and analysis")
+    print(f"\n Data loading complete")
+    print(f" Ready for cleaning and analysis")
     
     return df
 
